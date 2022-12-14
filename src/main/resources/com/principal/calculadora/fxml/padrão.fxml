@@ -12,92 +12,92 @@
 <?import javafx.scene.text.Font?>
 
 <BorderPane id="background-pane" prefHeight="500.0" prefWidth="365.0" stylesheets="@../estilo/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <center>
+   <bottom>
       <Pane id="pane" maxHeight="583.0" maxWidth="365.0" prefHeight="500.0" prefWidth="365.0" style="-fx-alignment: center;" BorderPane.alignment="CENTER">
          <children>
-            <TextField alignment="TOP_RIGHT" layoutX="53.0" layoutY="100.0" prefHeight="70.0" prefWidth="266.0" style="-fx-background-color: #d5d5d5; -fx-background-radius: 10px;" />
+            <TextField alignment="TOP_RIGHT" layoutX="57.0" layoutY="100.0" prefHeight="70.0" prefWidth="245.0" style="-fx-background-color: #F2F2F2; -fx-background-radius: 10px;" />
             <Accordion layoutX="38.0" layoutY="100.0" />
-            <Button contentDisplay="CENTER" layoutX="129.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 50px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="5" textFill="#f2f2f2">
+            <Button contentDisplay="CENTER" layoutX="129.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="5" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="129.0" layoutY="183.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 50px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="8" textFill="#f2f2f2">
+            <Button contentDisplay="CENTER" layoutX="129.0" layoutY="183.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="8" textFill="#f2f2f2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TEXT_ONLY" layoutX="73.0" layoutY="183.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" text="7" textFill="#f2f2f2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="74.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="4" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button contentDisplay="TEXT_ONLY" layoutX="73.0" layoutY="183.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 50px;" text="7" textFill="#f2f2f2">
-               <font>
-                  <Font name="Arial" size="18.0" />
-               </font>
-            </Button>
-            <Button contentDisplay="CENTER" layoutX="74.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 50px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="4" textFill="#f2f2f2">
+            <Button fx:id="button1" layoutX="73.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="1" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button1" layoutX="73.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 50px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="1" textFill="#f2f2f2">
+            <Button contentDisplay="CENTER" layoutX="186.0" layoutY="183.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="9" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="186.0" layoutY="183.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 50px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="9" textFill="#f2f2f2">
+            <Button contentDisplay="CENTER" layoutX="129.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="2" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="129.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 50px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="2" textFill="#f2f2f2">
+            <Button layoutX="129.0" layoutY="363.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="0" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="129.0" layoutY="363.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 50px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="0" textFill="#f2f2f2">
+            <Button contentDisplay="CENTER" layoutX="186.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="6" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="186.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 50px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="6" textFill="#f2f2f2">
+            <Button contentDisplay="CENTER" layoutX="186.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="3" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="186.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 50px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="3" textFill="#f2f2f2">
+            <Button contentDisplay="CENTER" layoutX="186.0" layoutY="363.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="=" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="186.0" layoutY="363.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 50px; -fx-background-color: #0066FF;" text="=" textFill="#f2f2f2">
+            <Button layoutX="241.0" layoutY="183.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="+" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="241.0" layoutY="183.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 50px; -fx-background-color: #0066FF;" text="+" textFill="#f2f2f2">
+            <Button contentDisplay="CENTER" layoutX="241.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="-" textFill="#f2f2f2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="241.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="÷" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="241.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 50px; -fx-background-color: #0066FF;" text="-" textFill="#f2f2f2">
-               <font>
-                  <Font name="Arial Black" size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="241.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 50px; -fx-background-color: #0066FF;" text="÷" textFill="#f2f2f2">
+            <Button layoutX="241.0" layoutY="363.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="×" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="241.0" layoutY="363.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 50px; -fx-background-color: #0066FF;" text="×" textFill="#f2f2f2">
+            <Button layoutX="74.0" layoutY="363.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="." textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button layoutX="74.0" layoutY="363.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 50px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="." textFill="#f2f2f2">
-               <font>
-                  <Font name="Garamond Bold" size="18.0" />
-               </font>
-            </Button>
-            <Label alignment="CENTER" layoutX="53.0" layoutY="143.0" prefHeight="21.0" prefWidth="24.0" text="⟳">
+            <Label alignment="CENTER" layoutX="57.0" layoutY="143.0" prefHeight="21.0" prefWidth="24.0" text="⟳">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
@@ -109,5 +109,5 @@
             </Label>
          </children>
       </Pane>
-   </center>
+   </bottom>
 </BorderPane>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane dividerPositions="0.5322486074464966" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="970.0" prefWidth="1366.0" style="-fx-background-color: #D8D5D5;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/19">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0" style="-fx-background-color: #03B68B;">
+         <children>
+            <Label layoutX="83.0" layoutY="662.0" prefHeight="27.0" prefWidth="284.0" text="Caso não tenha cadastro," textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="369.0" prefHeight="59.0" prefWidth="524.0" text="bem - vindo de volta" textFill="WHITE">
+               <font>
+                  <Font name="Arial Black" size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="100.0" layoutY="407.0" prefHeight="59.0" prefWidth="524.0" text="ao nosso sistema." textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="40.0" />
+               </font>
+            </Label>
+            <Label layoutX="83.0" layoutY="689.0" prefHeight="27.0" prefWidth="118.0" text="clique aqui" textFill="RED">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="208.0" layoutY="689.0" prefHeight="27.0" prefWidth="284.0" text="e faça o seu." textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="24.0" />
+               </font>
+            </Label>
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+         <children>
+            <Label layoutX="109.0" layoutY="341.0" prefHeight="27.0" prefWidth="410.0" text="Nome de usuário ou email" textFill="#03b68b">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userNameLoginField" layoutX="109.0" layoutY="381.0" prefHeight="46.0" prefWidth="424.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </TextField>
+            <Label layoutX="102.0" layoutY="541.0" prefHeight="27.0" prefWidth="410.0" text="Senha" textFill="#03b68b">
+               <font>
+                  <Font name="System Bold" size="28.0" />
+               </font>
+            </Label>
+            <TextField fx:id="userPasssordLoginField" layoutX="102.0" layoutY="581.0" prefHeight="46.0" prefWidth="424.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
+               <cursor>
+                  <Cursor fx:constant="TEXT" />
+               </cursor>
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </TextField>
+         </children></AnchorPane>
+  </items>
+</SplitPane>

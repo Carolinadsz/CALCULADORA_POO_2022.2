@@ -11,102 +11,116 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="background-pane" prefHeight="500.0" prefWidth="365.0" stylesheets="@../estilo/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane id="background-pane" prefHeight="500.0" prefWidth="365.0" stylesheets="@../estilo/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.principal.calculadora.controlador.Controlador">
    <bottom>
       <Pane id="pane" maxHeight="583.0" maxWidth="365.0" prefHeight="500.0" prefWidth="365.0" style="-fx-alignment: center;" BorderPane.alignment="CENTER">
          <children>
-            <TextField alignment="TOP_RIGHT" layoutX="57.0" layoutY="100.0" prefHeight="70.0" prefWidth="245.0" style="-fx-background-color: #F2F2F2; -fx-background-radius: 10px;" />
+            <TextField fx:id="visorTextField" alignment="TOP_RIGHT" layoutX="57.0" layoutY="87.0" prefHeight="70.0" prefWidth="245.0" style="-fx-background-color: #F2F2F2; -fx-background-radius: 10px;">
+               <font>
+                  <Font size="18.0" />
+               </font></TextField>
             <Accordion layoutX="38.0" layoutY="100.0" />
-            <Button contentDisplay="CENTER" layoutX="129.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="5" textFill="#f2f2f2">
-               <font>
-                  <Font name="Garamond Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button contentDisplay="CENTER" layoutX="129.0" layoutY="183.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="8" textFill="#f2f2f2">
+            <Button contentDisplay="TEXT_ONLY" layoutX="51.0" layoutY="244.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="60.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" text="7" textFill="#f2f2f2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button contentDisplay="TEXT_ONLY" layoutX="73.0" layoutY="183.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" text="7" textFill="#f2f2f2">
+            <Button fx:id="button1" layoutX="51.0" layoutY="360.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="60.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="1" textFill="#f2f2f2">
+               <font>
+                  <Font name="Garamond Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="119.0" layoutY="360.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="60.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="2" textFill="#f2f2f2">
+               <font>
+                  <Font name="Garamond Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="187.0" layoutY="419.0" mnemonicParsing="false" onAction="#igual" prefHeight="50.0" prefWidth="60.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="=" textFill="#f2f2f2">
+               <font>
+                  <Font name="Garamond Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="254.0" layoutY="184.0" mnemonicParsing="false" onAction="#divisao" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="÷" textFill="#f2f2f2">
+               <font>
+                  <Font name="Garamond Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="CENTER" layoutX="254.0" layoutY="244.0" mnemonicParsing="false" onAction="#multiplicacao" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="×" textFill="#f2f2f2">
                <font>
                   <Font size="18.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="74.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="4" textFill="#f2f2f2">
+            <Button layoutX="255.0" layoutY="302.0" mnemonicParsing="false" onAction="#subtracao" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="-" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button fx:id="button1" layoutX="73.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="1" textFill="#f2f2f2">
+            <Button layoutX="255.0" layoutY="359.0" mnemonicParsing="false" onAction="#soma" prefHeight="109.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="+" textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="186.0" layoutY="183.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="9" textFill="#f2f2f2">
+            <Button layoutX="51.0" layoutY="419.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="." textFill="#f2f2f2">
                <font>
                   <Font name="Garamond Bold" size="18.0" />
                </font>
             </Button>
-            <Button contentDisplay="CENTER" layoutX="129.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="2" textFill="#f2f2f2">
-               <font>
-                  <Font name="Garamond Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="129.0" layoutY="363.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="0" textFill="#f2f2f2">
-               <font>
-                  <Font name="Garamond Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button contentDisplay="CENTER" layoutX="186.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="6" textFill="#f2f2f2">
-               <font>
-                  <Font name="Garamond Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button contentDisplay="CENTER" layoutX="186.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="3" textFill="#f2f2f2">
-               <font>
-                  <Font name="Garamond Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button contentDisplay="CENTER" layoutX="186.0" layoutY="363.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="=" textFill="#f2f2f2">
-               <font>
-                  <Font name="Garamond Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="241.0" layoutY="183.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="+" textFill="#f2f2f2">
-               <font>
-                  <Font name="Garamond Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button contentDisplay="CENTER" layoutX="241.0" layoutY="244.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="-" textFill="#f2f2f2">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="241.0" layoutY="302.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="÷" textFill="#f2f2f2">
-               <font>
-                  <Font name="Garamond Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="241.0" layoutY="363.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" text="×" textFill="#f2f2f2">
-               <font>
-                  <Font name="Garamond Bold" size="18.0" />
-               </font>
-            </Button>
-            <Button layoutX="74.0" layoutY="363.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="50.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="." textFill="#f2f2f2">
-               <font>
-                  <Font name="Garamond Bold" size="18.0" />
-               </font>
-            </Button>
-            <Label alignment="CENTER" layoutX="57.0" layoutY="143.0" prefHeight="21.0" prefWidth="24.0" text="⟳">
-               <font>
-                  <Font name="Garamond Bold" size="18.0" />
-               </font>
-            </Label>
-            <Label layoutX="107.0" layoutY="47.0" text="Calculadora" textFill="#f2f2f2">
+            <Label layoutX="107.0" layoutY="36.0" text="Calculadora" textFill="#f2f2f2">
                <font>
                   <Font name="Arial" size="27.0" />
                </font>
             </Label>
+            <Button contentDisplay="TEXT_ONLY" layoutX="119.0" layoutY="244.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="60.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" text="8" textFill="#f2f2f2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TEXT_ONLY" layoutX="187.0" layoutY="244.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="60.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" text="9" textFill="#f2f2f2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TEXT_ONLY" layoutX="119.0" layoutY="302.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="60.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" text="5" textFill="#f2f2f2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TEXT_ONLY" layoutX="187.0" layoutY="302.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="60.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" text="6" textFill="#f2f2f2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="119.0" layoutY="419.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="62.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" text="0" textFill="#f2f2f2">
+               <font>
+                  <Font name="Garamond Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TEXT_ONLY" layoutX="51.0" layoutY="302.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="60.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" text="4" textFill="#f2f2f2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TEXT_ONLY" layoutX="187.0" layoutY="360.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="60.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" text="3" textFill="#f2f2f2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button id="apagar" contentDisplay="TEXT_ONLY" layoutX="188.0" layoutY="184.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" style="-fx-background-radius: 10px; -fx-background-color: 002459; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" text="⌫" textFill="#f2f2f2" />
+            <Button contentDisplay="TEXT_ONLY" layoutX="120.0" layoutY="184.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" text="CE" textFill="#f2f2f2">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Button contentDisplay="TEXT_ONLY" layoutX="52.0" layoutY="184.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="60.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" text="√" textFill="#f2f2f2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Button>
+            <Button layoutX="52.0" layoutY="122.0" mnemonicParsing="false" onAction="#apagarTudo" prefHeight="41.0" prefWidth="42.0" style="-fx-background-radius: 20; -fx-background-color: 000000;" text="⟳">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
          </children>
       </Pane>
    </bottom>

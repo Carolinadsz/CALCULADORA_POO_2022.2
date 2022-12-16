@@ -1,0 +1,29 @@
+#background-pane{
+    -fx-background-color: #cccccc;  
+}
+
+#pane{
+    -fx-background-color: #272727; 
+}
+.button{
+    -fx-padding: 100%;
+    -fx-pref-width: 70px;
+    -fx-max-height: 140px;
+    -fx-border-insets: 5px;
+    -fx-background-insets: 5px;
+}
+#apagar{
+    -fx-background-color: #ff0000;
+}
+#apagar:hover{
+    -fx-background-color: #a31010;
+}
+
+.fundo-visor{
+    -fx-background-color:  #F2F2F2;
+    -fx-background-radius: 10px;
+}
+
+.ff{
+    -fx-min-width: 60;
+}

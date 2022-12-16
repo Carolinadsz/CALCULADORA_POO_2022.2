@@ -1,14 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<<<<<<< HEAD
-<?import java.lang.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.image.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-=======
->>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
 <?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
@@ -21,37 +12,21 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<<<<<<< HEAD
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1366.0" style="-fx-background-color: #D8D5D5;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.principal.cadastro.controlador.FXMLCadastroControlador">
-    <right>
-      <Pane prefHeight="834.0" prefWidth="788.0" style="-fx-background-color: #D8D5D5;" BorderPane.alignment="CENTER">
-         <children>
-            <ImageView fitHeight="598.0" fitWidth="640.0" layoutX="54.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
-=======
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="970.0" prefWidth="1366.0" style="-fx-background-color: #D8D5D5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.principal.cadastro.controlador.FXMLCadastroControlador.java">
     <right>
       <Pane prefHeight="834.0" prefWidth="788.0" style="-fx-background-color: #D8D5D5;" BorderPane.alignment="CENTER">
          <children>
             <ImageView fitHeight="636.0" fitWidth="714.0" layoutX="37.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
->>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
                <image>
                   <Image url="@../imagem/login@4x.png" />
                </image>
             </ImageView>
-<<<<<<< HEAD
-            <Label fx:id="errorNameLabel" layoutX="37.0" layoutY="14.0" prefHeight="31.0" prefWidth="674.0" textFill="RED">
-=======
             <Label fx:id="erroNome" layoutX="37.0" layoutY="14.0" prefHeight="31.0" prefWidth="674.0" textFill="RED">
->>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
                <font>
                   <Font name="Arial Black" size="16.0" />
                </font>
             </Label>
-<<<<<<< HEAD
-            <Label fx:id="errorEmailLabel" layoutX="37.0" layoutY="39.0" onMouseClicked="#setLogin" prefHeight="31.0" prefWidth="674.0" textFill="RED">
-=======
             <Label fx:id="erroEmail" layoutX="37.0" layoutY="39.0" prefHeight="31.0" prefWidth="674.0" textFill="RED">
->>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
                <font>
                   <Font name="Arial Black" size="16.0" />
                </font>
@@ -66,14 +41,6 @@
                   <Font name="Arial Black" size="16.0" />
                </font>
             </Label>
-<<<<<<< HEAD
-            <Button layoutX="37.0" layoutY="748.0" mnemonicParsing="false" onAction="#setLogin" style="-fx-background-color: #D8D5D5;" text="Já possui login? Clique aqui e entre." textFill="RED">
-               <font>
-                  <Font name="Arial" size="15.0" />
-               </font>
-            </Button>
-=======
->>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
          </children></Pane>
    </right>
    
@@ -92,11 +59,7 @@
                </font>
             </Label>
             
-<<<<<<< HEAD
-            <TextField fx:id="userNameField" layoutX="135.0" layoutY="150.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
-=======
             <TextField fx:id="campoNome" layoutX="135.0" layoutY="150.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
->>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -112,11 +75,7 @@
                </font>
             </Label>
             
-<<<<<<< HEAD
-            <TextField fx:id="userEmailField" layoutX="134.0" layoutY="252.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
-=======
             <TextField fx:id="campoEmail" layoutX="134.0" layoutY="252.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
->>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -137,11 +96,7 @@
                </font>
             </Label>
             
-<<<<<<< HEAD
-            <TextField fx:id="userPhoneField" layoutX="134.0" layoutY="355.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
-=======
             <TextField fx:id="campoTelefone" layoutX="134.0" layoutY="355.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
->>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -156,11 +111,7 @@
                </font>
             </Label>
             
-<<<<<<< HEAD
-            <PasswordField fx:id="userPasswordField" layoutX="133.0" layoutY="463.0" onKeyReleased="#keyReleased" prefHeight="44.0" prefWidth="341.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
-=======
             <PasswordField fx:id="campoSenha" layoutX="133.0" layoutY="463.0" onKeyReleased="#keyReleased" prefHeight="44.0" prefWidth="341.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
->>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
                <font>
                   <Font name="Arial" size="16.0" />
                </font>
@@ -190,11 +141,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-<<<<<<< HEAD
-            <PasswordField fx:id="userPasswordFieldConfirmation" layoutX="133.0" layoutY="579.0" onKeyReleased="#keyReleasedConfirmation" prefHeight="44.0" prefWidth="341.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
-=======
             <PasswordField fx:id="campoSenhaConfirmacao" layoutX="133.0" layoutY="579.0" onKeyReleased="#keyReleasedConfirmation" prefHeight="44.0" prefWidth="341.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
->>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
                <font>
                   <Font name="Arial" size="16.0" />
                </font>
@@ -219,10 +166,6 @@
                </graphic>
             </ToggleButton>
             
-<<<<<<< HEAD
-            
-            <Button id="submitBtn" fx:id="submitBtn" layoutX="203.0" layoutY="676.0" mnemonicParsing="false" onAction="#getInfo" prefHeight="51.0" prefWidth="221.0" style="-fx-background-radius: 30px; -fx-background-color: #03b68b;" text="Cadastre - se" textFill="#d8d5d5">
-=======
              <Label layoutX="135.0" layoutY="658.0" prefHeight="42.0" prefWidth="309.0" text="Pergunta para recuperação" textFill="#03b68b">
                <font>
                   <Font name="System Bold" size="24.0" />
@@ -264,7 +207,6 @@
             
             
             <Button id="submitBtn" fx:id="cadastrarBtn" layoutX="168.0" layoutY="900.0" mnemonicParsing="false" onAction="#getInfo" prefHeight="51.0" prefWidth="221.0" style="-fx-background-radius: 30px; -fx-background-color: #03b68b;" text="Cadastre - se" textFill="#d8d5d5">
->>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
                <font>
                   <Font name="Arial Black" size="24.0" />
                </font>

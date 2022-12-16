@@ -1,6 +1,7 @@
 module com.main.calculadora{
     requires javafx.controls;
     requires javafx.fxml;
+    requires java.base;
 
     opens com.principal.cadastro.controlador;
     opens com.principal.login.controlador;

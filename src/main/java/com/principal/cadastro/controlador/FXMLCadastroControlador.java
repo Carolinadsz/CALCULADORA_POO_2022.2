@@ -1,5 +1,15 @@
+<<<<<<< HEAD
 package com.principal.cadastro.controlador;
 
+=======
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/javafx/FXMLController.java to edit this template
+ */
+package com.principal.cadastro.controlador;
+
+
+>>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.beans.binding.Bindings;
@@ -14,6 +24,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+<<<<<<< HEAD
 import com.principal.NewFXMain;
 
 /**
@@ -56,17 +67,75 @@ public class FXMLCadastroControlador implements Initializable {
     
     Image openEye = new Image(getClass().getResourceAsStream("/com/principal/cadastro/imagem/eye_open.png"));
     Image closedEye = new Image(getClass().getResourceAsStream("/com/principal/cadastro/imagem/eye_closed.png"));
+=======
+/**
+ * @author Yasmi
+ */
+public class FXMLCadastroControlador implements Initializable {
+    @FXML
+    private TextField userNameField;
+    @FXML
+    private TextField userEmailField;
+    @FXML
+    private TextField userPhoneField;
+    @FXML 
+    private PasswordField userPasswordField;
+    @FXML
+    private PasswordField userPasswordFieldConfirmation;
+    @FXML
+    private TextField userAskPasswordField;
+    @FXML
+    private TextField userAnswerPasswordField;
+    @FXML 
+    private Button submitBtn;
+    @FXML
+    private Label errorEmailLabel;
+    @FXML
+    private Label errorNameLabel;
+    @FXML
+    private Label errorPasswordLabel;
+    @FXML
+    private Label errorPhoneLabel;
+    @FXML
+    private Label errorAskAnswerLabel;
+    @FXML
+    private Label shownPassword;
+    @FXML
+    private Label shownPasswordConfirmation;
+    @FXML
+    private ToggleButton toggleBtn;
+    @FXML
+    private ToggleButton toggleBtnConfirmation;
+    @FXML
+    private ImageView imgConfirmation;
+    @FXML
+    private ImageView img;
+    
+    Image openEye = new Image(getClass().getResourceAsStream("eye_open.png"));
+    Image closedEye = new Image(getClass().getResourceAsStream("eye_closed.png"));
+>>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
     String userName;
     String userEmail;
     String userPhone;
     String userPassword;
     String userPasswordConfirmation;
+<<<<<<< HEAD
     
     @FXML
     void getInfo(ActionEvent event) throws Exception {
         userName = userNameField.getText();
         nameValidation();
         
+=======
+    String userAskPassword;
+    String userAnswerPassword;
+    
+    @FXML
+    void getInfo(ActionEvent event) {
+        userName = userNameField.getText();
+        nameValidation();
+       
+>>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
         userEmail = userEmailField.getText();
         emailValidation();
         
@@ -79,10 +148,18 @@ public class FXMLCadastroControlador implements Initializable {
         userPasswordConfirmation = userPasswordFieldConfirmation.getText();
         passwordValidation(userPasswordConfirmation);
         
+<<<<<<< HEAD
         if((errorEmailLabel.getText().isEmpty() && errorNameLabel.getText().isEmpty() && errorPasswordLabel.getText().isEmpty() && errorPhoneLabel.getText().isEmpty())){
             NewFXMain change = new NewFXMain();
             change.changeScreen(1);
         }
+=======
+        userAskPassword = userAskPasswordField.getText();
+        recoverPassword(userAskPassword);
+        
+        userAnswerPassword = userAnswerPasswordField.getText();
+        recoverPassword(userAnswerPassword);
+>>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
         
     }
     
@@ -94,6 +171,7 @@ public class FXMLCadastroControlador implements Initializable {
             errorNameLabel.setText("Campo 'Nome' vazio!");
         }
     }
+<<<<<<< HEAD
      
     public void notANumber(){
         for (int i = 0; i<userName.length(); i++){
@@ -107,6 +185,8 @@ public class FXMLCadastroControlador implements Initializable {
             
         }
     }
+=======
+>>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
     
     public void emailValidation(){
         if(!userEmail.isEmpty()){
@@ -161,6 +241,32 @@ public class FXMLCadastroControlador implements Initializable {
         }
     }
     
+<<<<<<< HEAD
+=======
+    public void recoverPassword(String recover){
+        if(!recover.isEmpty()){
+            errorAskAnswerLabel.setText("Campo 'Pergunta' ou/e 'Respostas' vazio(s)!");
+        }
+        else{
+            errorAskAnswerLabel.setText("");
+        }
+    }
+    
+    public void notANumber(){
+        for (int i = 0; i<userName.length(); i++){
+            if(Character.isDigit(userName.charAt(i))){
+                errorNameLabel.setText("Campo 'Nome' não pode conter números!");
+                break;
+            }
+            else{
+                errorNameLabel.setText("");
+            }
+            
+        }
+    }
+    
+    
+>>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
     @FXML
     void seePassword(ActionEvent e){
         if(toggleBtn.isSelected()){
@@ -203,9 +309,12 @@ public class FXMLCadastroControlador implements Initializable {
         shownPasswordConfirmation.setVisible(false);
     }    
     
+<<<<<<< HEAD
     @FXML
     void setLogin(ActionEvent event) throws Exception{
         NewFXMain change = new NewFXMain();
         change.changeScreen(3);
     }
+=======
+>>>>>>> 2a275440802492206790c8964a0dc3f05e02a308
 }

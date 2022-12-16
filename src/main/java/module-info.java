@@ -1,7 +1,7 @@
-module com.main.calculadora {
+module com.principal{
     requires javafx.controls;
     requires javafx.fxml;
 
     opens com.principal to javafx.fxml;
-    exports com.principal;
+    exports com.principal.db;
 }

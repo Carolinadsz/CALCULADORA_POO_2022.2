@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Button?>
@@ -13,7 +18,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane id="background-pane" prefHeight="506.0" prefWidth="500.0" stylesheets="@../estilo/style.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.principal.calculadora.controlador.Controlador">
+<BorderPane id="background-pane" prefHeight="506.0" prefWidth="500.0" stylesheets="@../estilo/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.principal.calculadora.controlador.Controlador">
    <top>
       <Pane id="pane" maxHeight="619.0" maxWidth="358.0" prefHeight="520.0" prefWidth="358.0" style="-fx-background-radius: 10px;" BorderPane.alignment="CENTER">
          <children>
@@ -25,7 +30,7 @@
                         <Font size="15.0" />
                      </font>
                   </TextField>
-                  <TextField fx:id="visorPrincipal" alignment="CENTER_RIGHT" editable="false" prefHeight="56.0" prefWidth="245.0" style="-fx-background-color: #F2F2F2; -fx-background-radius: 10px;" text="2">
+                  <TextField fx:id="visorPrincipal" alignment="CENTER_RIGHT" editable="false" prefHeight="56.0" prefWidth="245.0" style="-fx-background-color: #F2F2F2; -fx-background-radius: 10px;" text="0">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -56,7 +61,7 @@
                   <RowConstraints maxHeight="75.0" minHeight="10.0" prefHeight="75.0" vgrow="SOMETIMES" />
               </rowConstraints>
                <children>
-                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" minWidth="75.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="√" textFill="#f2f2f2">
+                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" minWidth="75.0" mnemonicParsing="false" onAction="#raizQuad" prefHeight="49.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="√" textFill="#f2f2f2">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -64,66 +69,66 @@
                         <Insets />
                      </GridPane.margin>
                   </Button>
-                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" minWidth="70.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="CE" textFill="#f2f2f2" GridPane.columnIndex="1">
+                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" minWidth="70.0" mnemonicParsing="false" onAction="#apagarCE" prefHeight="60.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="CE" textFill="#f2f2f2" GridPane.columnIndex="1">
                      <font>
                         <Font size="17.0" />
                      </font>
                   </Button>
-                  <Button id="apagar" contentDisplay="TEXT_ONLY" minHeight="60.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="63.0" style="-fx-background-radius: 5px; -fx-border-radius: ;" styleClass="ff" text="⌫" textFill="#f2f2f2" GridPane.columnIndex="2">
+                  <Button id="apagar" contentDisplay="TEXT_ONLY" minHeight="60.0" mnemonicParsing="false" onAction="#apagar" prefHeight="60.0" prefWidth="63.0" style="-fx-background-radius: 5px; -fx-border-radius: ;" styleClass="ff" text="⌫" textFill="#f2f2f2" GridPane.columnIndex="2">
                      <font>
                         <Font size="16.0" />
                      </font></Button>
-                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" minWidth="75.0" mnemonicParsing="false" onAction="#inserir1" prefHeight="50.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="7" textFill="#f2f2f2" GridPane.rowIndex="1">
+                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" minWidth="75.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="7" textFill="#f2f2f2" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" minWidth="70.0" mnemonicParsing="false" onAction="#inserir1" prefHeight="50.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="8" textFill="#f2f2f2" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" minWidth="70.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="8" textFill="#f2f2f2" GridPane.columnIndex="1" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" mnemonicParsing="false" onAction="#inserir1" prefHeight="59.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="9" textFill="#f2f2f2" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" mnemonicParsing="false" onAction="#inserir" prefHeight="59.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="9" textFill="#f2f2f2" GridPane.columnIndex="2" GridPane.rowIndex="1">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" minWidth="75.0" mnemonicParsing="false" onAction="#inserir1" prefHeight="50.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="4" textFill="#f2f2f2" GridPane.rowIndex="2">
+                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" minWidth="75.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="4" textFill="#f2f2f2" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" mnemonicParsing="false" onAction="#inserir1" prefHeight="50.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="5" textFill="#f2f2f2" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="5" textFill="#f2f2f2" GridPane.columnIndex="1" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" mnemonicParsing="false" onAction="#inserir1" prefHeight="50.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="6" textFill="#f2f2f2" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="6" textFill="#f2f2f2" GridPane.columnIndex="2" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button fx:id="button1" minHeight="60.0" mnemonicParsing="false" onAction="#inserir1" prefHeight="50.0" prefWidth="0.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" styleClass="ff" text="1" textFill="#f2f2f2" GridPane.rowIndex="3">
+                  <Button fx:id="button1" minHeight="60.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="0.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" styleClass="ff" text="1" textFill="#f2f2f2" GridPane.rowIndex="3">
                      <font>
                         <Font name="Garamond Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="CENTER" maxWidth="620.0" minHeight="60.0" minWidth="70.0" mnemonicParsing="false" onAction="#inserir1" prefHeight="60.0" prefWidth="0.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" styleClass="ff" text="2" textFill="#f2f2f2" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <Button contentDisplay="CENTER" maxWidth="620.0" minHeight="60.0" minWidth="70.0" mnemonicParsing="false" onAction="#inserir" prefHeight="60.0" prefWidth="0.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" styleClass="ff" text="2" textFill="#f2f2f2" GridPane.columnIndex="1" GridPane.rowIndex="3">
                      <font>
                         <Font name="Garamond Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" mnemonicParsing="false" onAction="#inserir1" prefHeight="50.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="3" textFill="#f2f2f2" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <Button contentDisplay="TEXT_ONLY" minHeight="60.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="0.0" style="-fx-background-radius: 10px; -fx-background-color: #272727; -fx-border-color: #F2F2F2; -fx-border-radius: 5px;" styleClass="ff" text="3" textFill="#f2f2f2" GridPane.columnIndex="2" GridPane.rowIndex="3">
                      <font>
                         <Font size="18.0" />
                      </font>
                   </Button>
-                  <Button minHeight="60.0" mnemonicParsing="false" onAction="#inserir1" prefHeight="50.0" prefWidth="0.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" styleClass="ff" text="." textFill="#f2f2f2" GridPane.rowIndex="4">
+                  <Button minHeight="60.0" mnemonicParsing="false" onAction="#inserir" prefHeight="50.0" prefWidth="0.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" styleClass="ff" text="." textFill="#f2f2f2" GridPane.rowIndex="4">
                      <font>
                         <Font name="Garamond Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button minHeight="60.0" mnemonicParsing="false" onAction="#inserir1" prefHeight="68.0" prefWidth="0.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" styleClass="ff" text="0" textFill="#f2f2f2" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                  <Button minHeight="60.0" mnemonicParsing="false" onAction="#inserir" prefHeight="68.0" prefWidth="0.0" style="-fx-border-radius: 5px; -fx-background-color: #272727; -fx-border-color: #F2F2F2;" styleClass="ff" text="0" textFill="#f2f2f2" GridPane.columnIndex="1" GridPane.rowIndex="4">
                      <font>
                         <Font name="Garamond Bold" size="18.0" />
                      </font>
@@ -149,12 +154,12 @@
                   <RowConstraints maxHeight="120.0" minHeight="10.0" prefHeight="115.0" valignment="TOP" vgrow="ALWAYS" />
               </rowConstraints>
                <children>
-                  <Button minHeight="60.0" minWidth="70.0" mnemonicParsing="false" onAction="#subtracao" prefHeight="59.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" styleClass="ff" text="×" textFill="#f2f2f2" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                  <Button minHeight="60.0" minWidth="70.0" mnemonicParsing="false" onAction="#multiplicacao" prefHeight="59.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" styleClass="ff" text="×" textFill="#f2f2f2" GridPane.columnIndex="3" GridPane.rowIndex="1">
                      <font>
                         <Font name="Garamond Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button contentDisplay="CENTER" maxHeight="155.0" minHeight="60.0" minWidth="70.0" mnemonicParsing="false" onAction="#multiplicacao" prefHeight="60.0" prefWidth="67.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" styleClass="ff" text="-" textFill="#f2f2f2" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                  <Button contentDisplay="CENTER" maxHeight="155.0" minHeight="60.0" minWidth="70.0" mnemonicParsing="false" onAction="#subtracao" prefHeight="60.0" prefWidth="67.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" styleClass="ff" text="-" textFill="#f2f2f2" GridPane.columnIndex="3" GridPane.rowIndex="2">
                      <font>
                         <Font size="18.0" />
                      </font>
@@ -164,7 +169,7 @@
                         <Font name="Garamond Bold" size="18.0" />
                      </font>
                   </Button>
-                  <Button maxHeight="145.0" minHeight="50.0" mnemonicParsing="false" onAction="#divisao" prefHeight="131.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" styleClass="ff" text="+" textFill="#f2f2f2" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                  <Button maxHeight="145.0" minHeight="50.0" mnemonicParsing="false" onAction="#soma" prefHeight="131.0" prefWidth="50.0" style="-fx-background-radius: 5px; -fx-background-color: #0066FF;" styleClass="ff" text="+" textFill="#f2f2f2" GridPane.columnIndex="3" GridPane.rowIndex="3">
                      <font>
                         <Font name="Garamond Bold" size="18.0" />
                      </font>

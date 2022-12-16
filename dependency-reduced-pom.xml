@@ -8,7 +8,7 @@
     <plugins>
       <plugin>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>3.2.1</version>
+        <version>3.4.1</version>
         <executions>
           <execution>
             <phase>package</phase>
@@ -18,7 +18,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>com.principal.Exec</mainClass>
+                  <mainClass>com.principal.NewFXMain</mainClass>
                 </transformer>
               </transformers>
             </configuration>
@@ -70,7 +70,7 @@
           </execution>
         </executions>
         <configuration>
-          <mainClass />
+          <mainClass>com.principal.NewFXMain</mainClass>
         </configuration>
       </plugin>
     </plugins>

@@ -3,7 +3,6 @@ package com.principal;
 import java.io.File;
 import java.net.URL;
 import javafx.application.Application;
-import static javafx.application.Application.launch;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
@@ -14,9 +13,9 @@ import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 /**
- *
  * @author Yasmi
  */
+
 public class NewFXMain extends Application {
     private static Stage stage;
     private static Scene sceneLogin;
@@ -26,19 +25,11 @@ public class NewFXMain extends Application {
     
     @Override
     public void start(Stage stage) throws Exception {
-        URL urlLogin = new File("").toURI().toURL();
-        Parent rootLogin = FXMLLoader.load(urlLogin);        
+        FXMLLoader loadLogin = new FXMLLoader(NewFXMain.class.getResource("/com/principal/cadastro/fxml/FXMLCadastro.fxml"));
+        Parent rootLogin = loadLogin.load();        
         sceneLogin = new Scene(rootLogin);
         
-        URL urlCadastro = new File("").toURI().toURL();
-        Parent rootCadastro = FXMLLoader.load(urlCadastro);        
-        sceneCadastro = new Scene(rootCadastro);
-        
-        URL urlSelecao = new File("").toURI().toURL();
-        Parent rootSelecao = FXMLLoader.load(urlSelecao);        
-        sceneSelecao = new Scene(rootSelecao);
-        
-        stage.setScene(sceneCadastro);        
+        stage.setScene(sceneLogin);        
         stage.show();
     }
     

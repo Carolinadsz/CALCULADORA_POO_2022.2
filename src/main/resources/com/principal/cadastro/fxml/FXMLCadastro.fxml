@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="970.0" prefWidth="1366.0" style="-fx-background-color: #D8D5D5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.principal.cadastro.controlador.FXMLCadastroControlador.java">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="970.0" prefWidth="1366.0" style="-fx-background-color: #D8D5D5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.principal.cadastro.controlador.FXMLCadastroControlador">
     <right>
       <Pane prefHeight="834.0" prefWidth="788.0" style="-fx-background-color: #D8D5D5;" BorderPane.alignment="CENTER">
          <children>
@@ -21,12 +21,12 @@
                   <Image url="@../imagem/login@4x.png" />
                </image>
             </ImageView>
-            <Label fx:id="erroNome" layoutX="37.0" layoutY="14.0" prefHeight="31.0" prefWidth="674.0" textFill="RED">
+            <Label fx:id="errorNameLabel" layoutX="37.0" layoutY="14.0" prefHeight="31.0" prefWidth="674.0" textFill="RED">
                <font>
                   <Font name="Arial Black" size="16.0" />
                </font>
             </Label>
-            <Label fx:id="erroEmail" layoutX="37.0" layoutY="39.0" prefHeight="31.0" prefWidth="674.0" textFill="RED">
+            <Label fx:id="errorEmailLabel" layoutX="37.0" layoutY="39.0" onMousePressed="#setLogin" prefHeight="31.0" prefWidth="674.0" text="Clique aqui para fazer login." textFill="RED">
                <font>
                   <Font name="Arial Black" size="16.0" />
                </font>
@@ -59,7 +59,7 @@
                </font>
             </Label>
             
-            <TextField fx:id="campoNome" layoutX="135.0" layoutY="150.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
+            <TextField fx:id="userNameField" layoutX="135.0" layoutY="150.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -75,7 +75,7 @@
                </font>
             </Label>
             
-            <TextField fx:id="campoEmail" layoutX="134.0" layoutY="252.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
+            <TextField fx:id="userEmailField" layoutX="134.0" layoutY="252.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -96,7 +96,7 @@
                </font>
             </Label>
             
-            <TextField fx:id="campoTelefone" layoutX="134.0" layoutY="355.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
+            <TextField fx:id="userPhoneField" layoutX="134.0" layoutY="355.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
                <cursor>
                   <Cursor fx:constant="TEXT" />
                </cursor>
@@ -111,7 +111,7 @@
                </font>
             </Label>
             
-            <PasswordField fx:id="campoSenha" layoutX="133.0" layoutY="463.0" onKeyReleased="#keyReleased" prefHeight="44.0" prefWidth="341.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
+            <PasswordField fx:id="userPasswordField" layoutX="133.0" layoutY="463.0" onKeyReleased="#keyReleased" prefHeight="44.0" prefWidth="341.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
                <font>
                   <Font name="Arial" size="16.0" />
                </font>
@@ -141,7 +141,7 @@
                   <Font name="System Bold" size="24.0" />
                </font>
             </Label>
-            <PasswordField fx:id="campoSenhaConfirmacao" layoutX="133.0" layoutY="579.0" onKeyReleased="#keyReleasedConfirmation" prefHeight="44.0" prefWidth="341.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
+            <PasswordField fx:id="userPasswordFieldConfirmation" layoutX="133.0" layoutY="579.0" onKeyReleased="#keyReleasedConfirmation" prefHeight="44.0" prefWidth="341.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
                <font>
                   <Font name="Arial" size="16.0" />
                </font>
@@ -166,47 +166,8 @@
                </graphic>
             </ToggleButton>
             
-             <Label layoutX="135.0" layoutY="658.0" prefHeight="42.0" prefWidth="309.0" text="Pergunta para recuperação" textFill="#03b68b">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
-            <Label layoutX="135.0" layoutY="679.0" prefHeight="42.0" prefWidth="309.0" text="de sua senha" textFill="#03b68b">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
-            <TextField id="userAskPassword" fx:id="campoPergunta" layoutX="134.0" layoutY="721.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-               <font>
-                  <Font name="Arial" size="16.0" />
-               </font>
-            </TextField>
             
-            <Label layoutX="141.0" layoutY="770.0" prefHeight="37.0" prefWidth="252.0" text="Resposta para a" textFill="#03b68b">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
-            <Label layoutX="141.0" layoutY="789.0" prefHeight="37.0" prefWidth="252.0" text="pergunta anterior" textFill="#03b68b">
-               <font>
-                  <Font name="System Bold" size="24.0" />
-               </font>
-            </Label>
-            
-            <TextField id="userAnswerPassword" fx:id="campoResposta" layoutX="135.0" layoutY="826.0" prefHeight="42.0" prefWidth="358.0" style="-fx-background-color: #C8C8C8; -fx-background-radius: 10px;">
-               <cursor>
-                  <Cursor fx:constant="TEXT" />
-               </cursor>
-               <font>
-                  <Font name="Arial" size="16.0" />
-               </font>
-            </TextField>
-            
-            
-            <Button id="submitBtn" fx:id="cadastrarBtn" layoutX="168.0" layoutY="900.0" mnemonicParsing="false" onAction="#getInfo" prefHeight="51.0" prefWidth="221.0" style="-fx-background-radius: 30px; -fx-background-color: #03b68b;" text="Cadastre - se" textFill="#d8d5d5">
+            <Button id="submitBtn" fx:id="submitBtn" layoutX="203.0" layoutY="777.0" mnemonicParsing="false" onAction="#getInfo" prefHeight="51.0" prefWidth="221.0" style="-fx-background-radius: 30px; -fx-background-color: #03b68b;" text="Cadastre - se" textFill="#d8d5d5">
                <font>
                   <Font name="Arial Black" size="24.0" />
                </font>

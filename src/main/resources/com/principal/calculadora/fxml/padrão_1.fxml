@@ -14,7 +14,7 @@
 
 <BorderPane id="background-pane" prefHeight="506.0" prefWidth="500.0" stylesheets="@../estilo/style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.principal.calculadora.controlador.Controlador">
    <top>
-      <Pane id="pane" maxHeight="619.0" maxWidth="358.0" prefHeight="619.0" prefWidth="358.0" style="-fx-background-radius: 10px;" BorderPane.alignment="CENTER">
+      <Pane id="pane" maxHeight="619.0" maxWidth="358.0" prefHeight="591.0" prefWidth="358.0" style="-fx-background-radius: 10px;" BorderPane.alignment="CENTER">
          <children>
             <Accordion layoutX="38.0" layoutY="100.0" />
             <FlowPane alignment="BOTTOM_LEFT" layoutX="57.0" layoutY="64.0" prefHeight="127.0" prefWidth="245.0" styleClass="fundo-visor">
@@ -41,7 +41,7 @@
                   <Font size="17.0" />
                </font>
             </Button>
-            <GridPane layoutX="43.0" layoutY="230.0" prefHeight="276.0" prefWidth="234.0">
+            <GridPane layoutX="43.0" layoutY="240.0" prefHeight="276.0" prefWidth="234.0">
               <columnConstraints>
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="87.0" minWidth="10.0" percentWidth="30.0" prefWidth="66.0" />
                 <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" percentWidth="30.0" prefWidth="100.0" />
@@ -131,7 +131,7 @@
                   </Button>
                </children>
             </GridPane>
-            <GridPane layoutX="253.0" layoutY="230.0" minHeight="276.0" minWidth="60.0" prefHeight="276.0" prefWidth="60.0">
+            <GridPane layoutX="253.0" layoutY="240.0" minHeight="276.0" minWidth="60.0" prefHeight="276.0" prefWidth="60.0">
               <columnConstraints>
                 <ColumnConstraints />
                   <ColumnConstraints />

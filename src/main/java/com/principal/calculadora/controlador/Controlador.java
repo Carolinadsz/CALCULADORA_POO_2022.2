@@ -58,11 +58,12 @@ public class Controlador {
     
     
     @FXML
-    protected void inserirPrincipal(ActionEvent e){
+    protected void inserir(ActionEvent e){
         String numero = ((Button) e.getSource()).getText();
         String antigo = visorPrincipal.getText();
         visorPrincipal.setText(antigo + numero);
     }
+    @FXML
     protected void inserirSecundario(ActionEvent e, String operador){
        
          String numero = visorPrincipal.getText();
@@ -73,35 +74,35 @@ public class Controlador {
     
     @FXML
     protected void multiplicacao(ActionEvent e) {
-        setValor1(Double.parseDouble(visorTextField.getText()));
-                 visorTextField.setText("");
+        setValor1(Double.parseDouble(visorPrincipal.getText()));
+                 visorPrincipal.setText("");
                  setOperacao("*");
     }
     
     @FXML
     protected void divisao(ActionEvent e) {
-        setValor1(Double.parseDouble(visorTextField.getText()));
-                 visorTextField.setText("");
+        setValor1(Double.parseDouble(visorPrincipal.getText()));
+                 visorPrincipal.setText("");
                  setOperacao("/");
     }
     
     @FXML
     protected void soma(ActionEvent e) {
-        setValor1(Double.parseDouble(visorTextField.getText()));
-                 visorTextField.setText("");
+        setValor1(Double.parseDouble(visorPrincipal.getText()));
+                 visorPrincipal.setText("");
                  setOperacao("+");
     }
     
     @FXML
     protected void subtracao(ActionEvent e) {
-        setValor1(Double.parseDouble(visorTextField.getText()));
-                 visorTextField.setText("");
+        setValor1(Double.parseDouble(visorPrincipal.getText()));
+                 visorPrincipal.setText("");
                  setOperacao("-");
     }
     
     @FXML
     protected void apagarTudo(ActionEvent e) {
-        visorTextField.setText("");
+        visorPrincipal.setText("");
                  setValor1(0);
                  setValor2(0);
                  setOperacao("");
@@ -110,7 +111,7 @@ public class Controlador {
     
     @FXML
     protected void igual(ActionEvent e) {
-        setValor2(Double.parseDouble(visorTextField.getText()));
+        setValor2(Double.parseDouble(visorPrincipal.getText()));
                 
                 switch(operacao) {
                     case "+":
@@ -123,11 +124,11 @@ public class Controlador {
                         break;
                     case "*":
                         setResultado(getValor1() * getValor2());
-                        visorTextField.setText(String.valueOf(getResultado()));
+                        visorPrincipal.setText(String.valueOf(getResultado()));
                         break;
                     case "/":
                         setResultado(getValor1() / getValor2());
-                        visorTextField.setText(String.valueOf(getResultado()));
+                        visorPrincipal.setText(String.valueOf(getResultado()));
                         break;
                 }
                 

@@ -59,9 +59,18 @@ public class Controlador {
     
     @FXML
     protected void inserir(ActionEvent e){
-        String numero = ((Button) e.getSource()).getText();
-        String antigo = visorPrincipal.getText();
-        visorPrincipal.setText(antigo + numero);
+        visorPrincipal.setText("");
+//        String numero = ((Button) e.getSource()).getText();
+//        System.out.println(visorPrincipal.getText().contains("0"));
+//        if (visorPrincipal.getText().contains("0")){
+//            System.out.println("com.principal.calculadora.controlador.Controlador.inserir()");
+//            visorPrincipal.setText("");
+//            visorPrincipal.setText( numero);
+//        }
+//        else {
+//            String antigo = visorPrincipal.getText();
+//            visorPrincipal.setText( antigo+numero);
+//        }  
     }
     @FXML
     protected void inserirSecundario(ActionEvent e, String operador){
@@ -74,44 +83,49 @@ public class Controlador {
     
     @FXML
     protected void multiplicacao(ActionEvent e) {
-        setValor1(Double.parseDouble(visorPrincipal.getText()));
-                 visorPrincipal.setText("");
-                 setOperacao("*");
+        setValor1(Long.parseLong(visorPrincipal.getText()));
+            visorSecundario.setText(String.valueOf(getValor1()) + " ×");
+            visorPrincipal.setText("");
+            setOperacao("*");
     }
     
     @FXML
     protected void divisao(ActionEvent e) {
-        setValor1(Double.parseDouble(visorPrincipal.getText()));
-                 visorPrincipal.setText("");
-                 setOperacao("/");
+        setValor1(Long.parseLong(visorPrincipal.getText()));
+            visorSecundario.setText(String.valueOf(getValor1()));
+            visorPrincipal.setText("");
+            setOperacao("/");
     }
     
     @FXML
     protected void soma(ActionEvent e) {
-        setValor1(Double.parseDouble(visorPrincipal.getText()));
-                 visorPrincipal.setText("");
-                 setOperacao("+");
+        setValor1(Long.parseLong(visorPrincipal.getText()));
+            visorSecundario.setText(String.valueOf(getValor1()));
+            visorPrincipal.setText("");
+            setOperacao("+");
     }
     
     @FXML
     protected void subtracao(ActionEvent e) {
-        setValor1(Double.parseDouble(visorPrincipal.getText()));
-                 visorPrincipal.setText("");
-                 setOperacao("-");
+        setValor1(Long.parseLong(visorPrincipal.getText()));
+            visorSecundario.setText(String.valueOf(getValor1()));
+            visorPrincipal.setText("");
+            setOperacao("-");
     }
     
     @FXML
     protected void apagarTudo(ActionEvent e) {
         visorPrincipal.setText("");
-                 setValor1(0);
-                 setValor2(0);
-                 setOperacao("");
-        
+        visorSecundario.setText("");
+        setValor1(0);
+        setValor2(0);
+        setOperacao("");
+        setResultado(0);
     }
     
     @FXML
     protected void igual(ActionEvent e) {
-        setValor2(Double.parseDouble(visorPrincipal.getText()));
+        setValor2(Long.parseLong(visorPrincipal.getText()));
                 
                 switch(operacao) {
                     case "+":
@@ -135,6 +149,8 @@ public class Controlador {
                 if(valor1 == 0 && valor2 == 0 && operacao == "/") {
                     visorPrincipal.setText("Erro!");
                 }
+                
+                setValor1(getResultado());
     }
     
     

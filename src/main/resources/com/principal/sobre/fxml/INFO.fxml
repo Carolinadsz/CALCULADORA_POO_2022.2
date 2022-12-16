@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #272727; -fx-border-color: #03b68b; -fx-border-width: 30; -fx-border-radius: 15;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="informações.INFOController">
+   <children>
+      <Label layoutX="229.0" layoutY="53.0" style="-fx-effect: -fx-effect;" text="Informações" textFill="#f2f2f2">
+         <font>
+            <Font name="Garamond Bold" size="34.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="77.0" fitWidth="100.0" layoutX="168.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: dropshadow(three-pass-box, rgba(5,5,5,0.8), 10, 0, 0, 0);">
+         <image>
+            <Image url="@../../../../../Pictures/PIC%20OFC%203.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="77.0" fitWidth="87.0" layoutX="58.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Downloads/WhatsApp%20Image%202022-12-16%20at%2011.27.41.jpeg" />
+         </image></ImageView>
+      <Label layoutX="474.0" layoutY="128.0" prefHeight="17.0" prefWidth="46.0" text="Carol" textFill="#f2f2f2">
+         <font>
+            <Font name="Garamond" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="336.0" layoutY="128.0" text="Daniel" textFill="#f2f2f2">
+         <font>
+            <Font name="Garamond" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="190.0" layoutY="128.0" text="Yasmin" textFill="#f2f2f2">
+         <font>
+            <Font name="Garamond" size="18.0" />
+         </font></Label>
+      <Label layoutX="82.0" layoutY="128.0" text="Lara" textFill="#f2f2f2">
+         <font>
+            <Font name="Garamond" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="77.0" fitWidth="108.0" layoutX="443.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../../../Pictures/PIC%20OFC%205.jpeg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="77.0" fitWidth="107.0" layoutX="298.0" layoutY="155.0" pickOnBounds="true" preserveRatio="true" style="-fx-effect: -fx-effect;">
+         <image>
+            <Image url="@../../../../../Pictures/PIC%20OFC%202.jpeg" />
+         </image>
+      </ImageView>
+      <Label layoutX="150.0" layoutY="287.0" prefHeight="40.0" prefWidth="339.0" text="Conte conosco para facilitar seus problemas matemáticos!" textFill="#f2f2f2">
+         <font>
+            <Font name="Garamond" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

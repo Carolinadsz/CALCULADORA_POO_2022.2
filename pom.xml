@@ -36,7 +36,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.4</version>
                 <configuration>
-                    <mainClass></mainClass>
+                    <mainClass>com.principal.IMC2001</mainClass>
                 </configuration>
                 <executions>
                     <execution>

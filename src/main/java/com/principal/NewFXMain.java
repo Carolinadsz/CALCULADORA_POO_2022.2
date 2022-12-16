@@ -28,11 +28,32 @@ public class NewFXMain extends Application {
     
     @Override
     public void start(Stage primaryStage) throws Exception {
+        stage = primaryStage;
         root = loadLogin.load();        
         scene = new Scene(root);
                 
         stage.setScene(scene);        
         stage.show();
+    }
+    
+    public void changeScreen(int num) throws Exception{
+        switch(num){
+            case 1: root = loadSelecao.load();
+                    scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+                    break;
+            case 2: root = loadCadastro.load();
+                    scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+                    break;
+            case 3: root = loadLogin.load();
+                    scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+                    break;
+        }
     }
     
     

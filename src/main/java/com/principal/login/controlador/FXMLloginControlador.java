@@ -39,14 +39,15 @@ public class FXMLloginControlador implements Initializable{
 
     @FXML
     void setSelection(ActionEvent event) throws Exception {
-        FXMLLoader loadLogin = new FXMLLoader(NewFXMain.class.getResource("/com/principal/login/fxml/FXMLlogin.fxml"));
-        root = loadLogin.load();    
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+        NewFXMain change = new NewFXMain();
+        change.changeScreen(1);
     }
     
+    @FXML
+    void setCadastro(ActionEvent event) throws Exception{
+        NewFXMain change = new NewFXMain();
+        change.changeScreen(2);
+    }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {

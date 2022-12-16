@@ -14,6 +14,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import com.principal.NewFXMain;
 
 /**
  * @author Yasmi
@@ -41,8 +42,6 @@ public class FXMLCadastroControlador implements Initializable {
     @FXML
     protected Label errorPhoneLabel;
     @FXML
-    protected Label errorAskAnswerLabel;
-    @FXML
     protected Label shownPassword;
     @FXML
     protected Label shownPasswordConfirmation;
@@ -64,9 +63,10 @@ public class FXMLCadastroControlador implements Initializable {
     String userPasswordConfirmation;
     
     @FXML
-    void getInfo(ActionEvent event) {
+    void getInfo(ActionEvent event) throws Exception {
         userName = userNameField.getText();
-       
+        nameValidation();
+        
         userEmail = userEmailField.getText();
         emailValidation();
         
@@ -78,6 +78,11 @@ public class FXMLCadastroControlador implements Initializable {
         
         userPasswordConfirmation = userPasswordFieldConfirmation.getText();
         passwordValidation(userPasswordConfirmation);
+        
+        if((errorEmailLabel.getText().isEmpty() && errorNameLabel.getText().isEmpty() && errorPasswordLabel.getText().isEmpty() && errorPhoneLabel.getText().isEmpty())){
+            NewFXMain change = new NewFXMain();
+            change.changeScreen(1);
+        }
         
     }
     
@@ -198,4 +203,9 @@ public class FXMLCadastroControlador implements Initializable {
         shownPasswordConfirmation.setVisible(false);
     }    
     
+    @FXML
+    void setLogin(ActionEvent event) throws Exception{
+        NewFXMain change = new NewFXMain();
+        change.changeScreen(3);
+    }
 }

@@ -18,18 +18,20 @@ import javafx.stage.Stage;
 
 public class NewFXMain extends Application {
     private static Stage stage;
-    private static Scene sceneLogin;
-    private static Scene sceneCadastro;
-    private static Scene sceneSelecao;
+    private static Scene scene;
+    private static Parent root;
+
+    FXMLLoader loadCadastro = new FXMLLoader(NewFXMain.class.getResource("/com/principal/cadastro/fxml/FXMLCadastro.fxml"));
+    FXMLLoader loadLogin = new FXMLLoader(NewFXMain.class.getResource("/com/principal/login/fxml/FXMLlogin.fxml"));
+    FXMLLoader loadSelecao = new FXMLLoader(NewFXMain.class.getResource("/com/principal/selecao/fxml/FXMLSelecao.fxml"));
 
     
     @Override
-    public void start(Stage stage) throws Exception {
-        FXMLLoader loadLogin = new FXMLLoader(NewFXMain.class.getResource("/com/principal/cadastro/fxml/FXMLCadastro.fxml"));
-        Parent rootLogin = loadLogin.load();        
-        sceneLogin = new Scene(rootLogin);
-        
-        stage.setScene(sceneLogin);        
+    public void start(Stage primaryStage) throws Exception {
+        root = loadLogin.load();        
+        scene = new Scene(root);
+                
+        stage.setScene(scene);        
         stage.show();
     }
     

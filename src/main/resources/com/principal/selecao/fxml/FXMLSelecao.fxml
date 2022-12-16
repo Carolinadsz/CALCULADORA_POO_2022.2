@@ -12,28 +12,28 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="970.0" prefWidth="1366.0" style="-fx-background-color: #03B68B;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.FXMLSelectionController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1366.0" style="-fx-background-color: #03B68B;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.principal.selecao.controlador.FXMLSelecaoControlador.java">
    <center>
       <Pane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
-            <Pane layoutX="337.0" layoutY="249.0" opacity="0.45" prefHeight="446.0" prefWidth="360.0" style="-fx-background-color: #D8D5D5;">
+            <Pane layoutX="337.0" layoutY="193.0" opacity="0.45" prefHeight="445.0" prefWidth="360.0" style="-fx-background-color: #D8D5D5;">
                <effect>
                   <Shadow />
                </effect>
             </Pane>
-            <Pane layoutX="791.0" layoutY="246.0" opacity="0.45" prefHeight="450.0" prefWidth="356.0" style="-fx-background-color: #D8D5D5;">
+            <Pane layoutX="820.0" layoutY="189.0" opacity="0.45" prefHeight="454.0" prefWidth="356.0" style="-fx-background-color: #D8D5D5;">
                <effect>
                   <Shadow />
                </effect>
             </Pane>
-            <Pane layoutX="796.0" layoutY="251.0" prefHeight="438.0" prefWidth="348.0" style="-fx-background-color: #D8D5D5;">
+            <Pane layoutX="823.0" layoutY="193.0" prefHeight="445.0" prefWidth="348.0" style="-fx-background-color: #D8D5D5;">
                <effect>
                   <Blend />
                </effect>
                <children>
-                  <ImageView fitHeight="181.0" fitWidth="203.0" layoutX="73.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="181.0" fitWidth="203.0" layoutX="73.0" layoutY="35.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../Controllers/imc_img1.png" />
+                        <Image url="@../imagem/imc_img1.png" />
                      </image>
                   </ImageView>
                   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="-1.0" layoutY="259.0" prefHeight="36.0" prefWidth="351.0" text="Calculadora" textFill="#03b68b">
@@ -48,7 +48,7 @@
                   </Label>
                </children>
             </Pane>
-            <Pane layoutX="343.0" layoutY="254.0" prefHeight="436.0" prefWidth="348.0" style="-fx-background-color: #D8D5D5;">
+            <Pane layoutX="343.0" layoutY="198.0" prefHeight="436.0" prefWidth="348.0" style="-fx-background-color: #D8D5D5;">
                <effect>
                   <Blend />
                </effect>
@@ -60,7 +60,7 @@
                   </Label>
                   <ImageView fitHeight="184.0" fitWidth="196.0" layoutX="82.0" layoutY="34.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../Controllers/calculadora_img.png" />
+                        <Image url="@../imagem/calculadora_img.png" />
                      </image>
                   </ImageView>
                </children>

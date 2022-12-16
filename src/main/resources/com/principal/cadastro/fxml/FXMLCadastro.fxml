@@ -12,11 +12,11 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="970.0" prefWidth="1366.0" style="-fx-background-color: #D8D5D5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.principal.cadastro.controlador.FXMLCadastroControlador">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1366.0" style="-fx-background-color: #D8D5D5;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.principal.cadastro.controlador.FXMLCadastroControlador">
     <right>
       <Pane prefHeight="834.0" prefWidth="788.0" style="-fx-background-color: #D8D5D5;" BorderPane.alignment="CENTER">
          <children>
-            <ImageView fitHeight="636.0" fitWidth="714.0" layoutX="37.0" layoutY="179.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fitHeight="598.0" fitWidth="640.0" layoutX="54.0" layoutY="154.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../imagem/login@4x.png" />
                </image>
@@ -26,7 +26,7 @@
                   <Font name="Arial Black" size="16.0" />
                </font>
             </Label>
-            <Label fx:id="errorEmailLabel" layoutX="37.0" layoutY="39.0" onMousePressed="#setLogin" prefHeight="31.0" prefWidth="674.0" text="Clique aqui para fazer login." textFill="RED">
+            <Label fx:id="errorEmailLabel" layoutX="37.0" layoutY="39.0" prefHeight="31.0" prefWidth="674.0" text="Clique aqui para fazer login." textFill="RED">
                <font>
                   <Font name="Arial Black" size="16.0" />
                </font>
@@ -167,7 +167,7 @@
             </ToggleButton>
             
             
-            <Button id="submitBtn" fx:id="submitBtn" layoutX="203.0" layoutY="777.0" mnemonicParsing="false" onAction="#getInfo" prefHeight="51.0" prefWidth="221.0" style="-fx-background-radius: 30px; -fx-background-color: #03b68b;" text="Cadastre - se" textFill="#d8d5d5">
+            <Button id="submitBtn" fx:id="submitBtn" layoutX="204.0" layoutY="702.0" mnemonicParsing="false" onAction="#getInfo" prefHeight="51.0" prefWidth="221.0" style="-fx-background-radius: 30px; -fx-background-color: #03b68b;" text="Cadastre - se" textFill="#d8d5d5">
                <font>
                   <Font name="Arial Black" size="24.0" />
                </font>
